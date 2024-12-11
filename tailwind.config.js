@@ -5,11 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        brand: ["Figtree", "sans-serif"],
+        brand: ["Montserrat", "sans-serif"],
       },
       animation: {
         text: "text 5s ease infinite",
         rotate: "rotate 3s linear infinite",
+         "rotate-center": "rotate-center 7s linear  infinite "
       },
       keyframes: {
         text: {
@@ -22,6 +23,14 @@ module.exports = {
             "background-position": "right center",
           },
         },
+        "rotate-center": {
+          "0%": {
+              transform: "rotate(0)"
+          },
+          to: {
+              transform: "rotate(360deg)"
+          }
+      },
         rotate: {
           "0%": { transform: "rotate(0deg) scale(10)" },
           "100%": { transform: "rotate(-360deg) scale(10)" },

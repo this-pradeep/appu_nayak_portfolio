@@ -1,4 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-outline-white {
+    text-shadow: 1px 1px 0px #fff, /* Bottom right */ -1px -1px 0px #fff,
+      /* Top left */ 1px -1px 0px #fff, /* Top right */ -1px 1px 0px #fff; /* Bottom left */
+  }
+  .text-outline-dark {
+    text-shadow: 1px 1px 0px #000, /* Bottom right */ -1px -1px 0px #000,
+      /* Top left */ 1px -1px 0px #000, /* Top right */ -1px 1px 0px #000; /* Bottom left */
+  }
+  .text-outline-subtle {
+    text-shadow: 1px 1px 0px #d4d4d4, /* Bottom right */ -1px -1px 0px #d4d4d4,
+      /* Top left */ 1px -1px 0px #d4d4d4, /* Top right */ -1px 1px 0px #d4d4d4; /* Bottom left */
+  }
+  .text-outline-subtle-dark {
+    text-shadow: 1px 1px 0px #525252, /* Bottom right */ -1px -1px 0px #525252,
+      /* Top left */ 1px -1px 0px #525252, /* Top right */ -1px 1px 0px #525252; /* Bottom left */
+  }
+  .text-outline-gold {
+    text-shadow: 1px 1px 0px #4a4438, /* Bottom right */ -1px -1px 0px #4a4438,
+      /* Top left */ 1px -1px 0px #4a4438, /* Top right */ -1px 1px 0px #4a4438; /* Bottom left */
+  }
+}
+
+.text-stroke {
+  @apply text-white text-outline-dark dark:text-black dark:text-outline-white;
+}
+.text-stroke-subtle {
+  @apply text-white text-outline-subtle dark:text-black dark:text-outline-subtle-dark;
+}
+.text-stroke-gold {
+  @apply text-white text-outline-subtle dark:text-black dark:text-outline-gold;
+}
